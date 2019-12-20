@@ -1,9 +1,5 @@
 package ar.uba.fi.algo3.modelo;
 
-import javax.management.AttributeList;
-import java.awt.peer.ChoicePeer;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -32,6 +28,7 @@ public class Colegio {
     }
 
     public void anotar(Deudor deudor) {
+
         this.deudores.add(deudor);
     }
 

@@ -5,6 +5,7 @@ public class Alumno implements Deudor {
     private String nombre;
 
     public Alumno(String nombre) {
+
         this.nombre = nombre;
     }
 
