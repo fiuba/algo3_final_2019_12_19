@@ -43,12 +43,38 @@ public class ColegioTest {
         sabatini.conformar(new Alumno("gabi"));
         sabatini.conformar(new Alumno("ova"));
         sabatini.conformar(new Alumno("quique"));
-        
+
         nacional.anotar(sabatini);
 
         // Cuando hay tres hermanos, uno de ellos no paga
         assertEquals(200, nacional.deudaAcumulada());
     }
 
-    
+    @Test
+    public void conMascotaNoMuerdeLaDeudaAcumuladaEsDeXXXPesos() {
+        Colegio nacional = new Colegio();
+
+        Mascota tanino = new Mascota();
+
+        nacional.anotar(tanino);
+
+        // Una mascota que NO muerde paga la cuota estipulada
+        assertEquals(150, nacional.deudaAcumulada());
+    }
+
+    @Test
+    public void conMascotaMuerdeLaDeudaAcumuladaEsDeXXXPesos() {
+        Colegio nacional = new Colegio();
+
+        Mascota tanino = new Mascota();
+
+        tanino.muerde();
+
+        nacional.anotar(tanino);
+
+        // Una mascota que SI muerde paga la cuota estipulada * 2
+        assertEquals(300, nacional.deudaAcumulada());
+    }
+
+
 }

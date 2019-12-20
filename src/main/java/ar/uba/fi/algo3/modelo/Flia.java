@@ -46,6 +46,7 @@ public class Flia implements Deudor {
     }
 
     private Double valorConDtoPara2(Double valor, double cuotaAlumno) {
+        
         return (valor - cuotaAlumno) + .75 * cuotaAlumno;
     }
 }
