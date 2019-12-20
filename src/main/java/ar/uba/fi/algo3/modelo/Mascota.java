@@ -18,4 +18,8 @@ public class Mascota implements Deudor {
     public void muerde() {
         this.mordio = true;
     }
+
+    public boolean haMordido() {
+        return this.mordio;
+    }
 }

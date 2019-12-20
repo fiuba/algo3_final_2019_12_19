@@ -1,3 +1,7 @@
+## Una posible solución
+
+![diagrama_clase][diagrama_clase]
+
 ## Antes de empezar
  
 a. Crear un proyecto nuevo desde su IDE llamándolo final-colegio-original. Una vez creado copiar todas las carpetas con
@@ -48,3 +52,6 @@ Basandonos en los items que ud. detalló en el punto (1) realice una mejora de d
 3)	a) Explique el concepto de SERIALIZACIÓN en POO.
 	b) ¿Explique que función cumple M-V-C?
 	c) ¿Como implementa `interfaces` en SMALLTALK?
+
+
+[diagrama_clase]: /diagrams/Class%20Diagram0.png

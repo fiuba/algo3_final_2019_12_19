@@ -12,14 +12,12 @@ public class Colegio {
     private static final double CUOTA_MASCOTA = 150.0;
 
     private List<Deudor> deudores;
+    private List<Mascota> mascotas;
 
     public Colegio() {
 
         this.deudores = new LinkedList<>();
-    }
-
-    public void anotar(Alumno alumno) {
-        this.deudores.add(alumno);
+        this.mascotas = new LinkedList<>();
     }
 
     public Double deudaAcumulada() {
@@ -35,5 +33,21 @@ public class Colegio {
 
     public void anotar(Deudor deudor) {
         this.deudores.add(deudor);
+    }
+
+    public void anotar(Mascota deudor) {
+        this.deudores.add(deudor);
+        this.mascotas.add(deudor);
+    }
+
+    public int mordidas() {
+        Integer result = 0;
+
+        for(Mascota m : this.mascotas) {
+            if (m.haMordido()) {
+                result = result + 1;
+            }
+        }
+        return result;
     }
 }

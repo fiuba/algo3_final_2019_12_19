@@ -2,7 +2,7 @@ package ar.uba.fi.algo3.modelo;
 
 import java.util.List;
 
-public class TarifaParaTres {
+public class TarifaParaTres implements Tarifa {
     private final TarifaFamiliar tarifaFamiliar;
     private final double cuotaAlumno;
 
@@ -13,6 +13,7 @@ public class TarifaParaTres {
 
     }
 
+    @Override
     public Double valor(List<Alumno> integrantes) {
         Double valor = this.tarifaFamiliar.valor(integrantes);
 

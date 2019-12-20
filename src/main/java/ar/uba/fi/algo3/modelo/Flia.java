@@ -22,22 +22,19 @@ public class Flia implements Deudor {
 
     @Override
     public Double deuda(double cuotaAlumno, double cuotaMascota) {
-        TarifaFamiliar tarifa = new TarifaFamiliar(cuotaAlumno, cuotaMascota);
-        Double result = 0.0;
-
-        result = tarifa.valor(this.integrantes);
-
+        Tarifa tarifa = new TarifaFamiliar(cuotaAlumno, cuotaMascota);
 
         if (this.integrantes.size() == 2) {
 
-            result = new TarifaParaDos(cuotaAlumno, cuotaMascota).valor(this.integrantes);
+            tarifa = new TarifaParaDos(cuotaAlumno, cuotaMascota);
+
         } else if (this.integrantes.size() == 3) {
 
-            result = new TarifaParaTres(cuotaAlumno, cuotaMascota).valor(this.integrantes);
+            tarifa = new TarifaParaTres(cuotaAlumno, cuotaMascota);
         }
 
 
-        return result;
+        return tarifa.valor(this.integrantes);
     }
 
 

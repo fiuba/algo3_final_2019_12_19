@@ -76,5 +76,21 @@ public class ColegioTest {
         assertEquals(300, nacional.deudaAcumulada());
     }
 
+    @Test
+    public void conMascotaMuerdeLaCantidadDeMordidas() {
+        Colegio nacional = new Colegio();
+
+        Mascota tanino = new Mascota();
+        Mascota boio = new Mascota();
+
+        tanino.muerde();
+
+        nacional.anotar(tanino);
+        nacional.anotar(boio);
+
+        // Una mascota que SI muerde paga la cuota estipulada * 2
+        assertEquals(1, nacional.mordidas());
+    }
+
 
 }
