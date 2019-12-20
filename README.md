@@ -49,10 +49,9 @@ Basandonos en los items que ud. detalló en el punto (1) realice una mejora de d
  
     b) Realice ahora en codigo dicha mejora de disenio incorporando la ultima parte de la historia tambien
 
-3)	a) Explique el concepto de SERIALIZACIÓN en POO.
-	b) ¿Explique que función cumple M-V-C?
-	c) ¿Como implementa `interfaces` en SMALLTALK?
 
+### Consigna 3 
 
+Preguntas teóricas a elección del docente.
 
 [diagrama_clase]: /diagrams/Class%20Diagram0.png
