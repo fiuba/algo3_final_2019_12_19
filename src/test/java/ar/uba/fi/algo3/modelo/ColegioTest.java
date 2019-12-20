@@ -22,10 +22,12 @@ public class ColegioTest {
     public void conDosAlumnosHermanosLaDeudaAcumuladaEsDeXXXPesos() {
         Colegio nacional = new Colegio();
 
-        Alumno gabi = new Alumno("gabi", "sabatini");
-        nacional.anotar(gabi);
-        nacional.anotar(new Alumno("ova", gabi));
+        Flia sabatini = new Flia("Sabatini");
 
+        sabatini.conformar(new Alumno("gabi"));
+        sabatini.conformar(new Alumno("ova"));
+
+        nacional.anotar(sabatini);
 
         // Cuando hay dos hermanos, uno de ellos paga 25% menos
         assertEquals(175, nacional.deudaAcumulada());
@@ -35,12 +37,14 @@ public class ColegioTest {
     public void conTresAlumnosHermanosLaDeudaAcumuladaEsDeXXXPesos() {
         Colegio nacional = new Colegio();
 
-        Alumno gabi = new Alumno("gabi", "sabatini");
-        Alumno quique = new Alumno("quique", gabi);
-        Alumno ova = new Alumno("ova", gabi);
-        nacional.anotar(gabi);
-        nacional.anotar(quique);
-        nacional.anotar(ova);
+
+        Flia sabatini = new Flia("Sabatini");
+
+        sabatini.conformar(new Alumno("gabi"));
+        sabatini.conformar(new Alumno("ova"));
+        sabatini.conformar(new Alumno("quique"));
+        
+        nacional.anotar(sabatini);
 
         // Cuando hay tres hermanos, uno de ellos no paga
         assertEquals(200, nacional.deudaAcumulada());
