@@ -54,4 +54,4 @@ Basandonos en los items que ud. detalló en el punto (1) realice una mejora de d
 	c) ¿Como implementa `interfaces` en SMALLTALK?
 
 
-[diagrama_clase]: /src/diagrams/Class%20Diagram0.png
+[diagrama_clase]: /diagrams/Class%20Diagram0.png
